@@ -24,7 +24,7 @@ const LoginScreen = () => {
     const [helpSectionToggle,setHelpSectionToggle] = useState(false)
 
     const logIn = () => {
-
+        //use username and password variables to validate emails
     }
 
     return(
