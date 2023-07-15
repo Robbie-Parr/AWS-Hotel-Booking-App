@@ -1,13 +1,7 @@
 import {
-    SafeAreaView,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
     Text,
     View,
-    TextInput,
     TouchableOpacity,
-    Button,
     Modal
   } from 'react-native';
 
@@ -20,12 +14,11 @@ type Props = {
 
 const ForgotPassword = ({visible,setVisible}:Props) => {
 
-
-
-
     return(
         <Modal visible={visible}>
-            <TouchableOpacity onPress={() => setVisible(false)}>Close</TouchableOpacity>
+            <TouchableOpacity onPress={() => setVisible(false)}>
+              <Text>Close</Text>
+            </TouchableOpacity>
             <View>
                 <Text>Forgot Password Section</Text>
             </View>

@@ -20,12 +20,11 @@ type Props = {
 
 const HelpSection = ({visible,setVisible}:Props) => {
 
-
-
-
     return(
         <Modal visible={visible}>
-            <TouchableOpacity onPress={() => setVisible(false)}>Close</TouchableOpacity>
+            <TouchableOpacity onPress={() => setVisible(false)}>
+              <Text>Close</Text>
+            </TouchableOpacity>
             <View>
                 <Text>Help Section</Text>
             </View>

@@ -24,6 +24,8 @@ const LoginScreen = () => {
     const [helpSectionToggle,setHelpSectionToggle] = useState(false)
 
     const logIn = () => {
+      console.log(username)
+      console.log(password)
         //use username and password variables to validate emails
     }
 
@@ -34,23 +36,25 @@ const LoginScreen = () => {
                 <HelpSection visible={helpSectionToggle} setVisible={setHelpSectionToggle}/>
             </View>
 
-            <Text>Login Screen</Text>
-            <View>
+            <Text style={{paddingTop:"5%",paddingLeft:"5%"}}>Login Screen</Text>
+            <View style={{padding:"10%"}}>
                 <TextInput onChangeText={setUsername} value={username} placeholder='Username'/>
                 <TextInput onChangeText={setPassword} value={password} placeholder='Password'/>
             </View>
-            <View>
+            <View style={{padding:"5%"}}>
                 <Button title="Sign In" onPress={logIn}/>
                 <Button title="Forgot Password" onPress={() => setForgotPasswordToggle(true)}/>
             </View>
 
-            <TouchableOpacity style={styles.help}>Help</TouchableOpacity>
+            <TouchableOpacity style={styles.help} onPress={() => setHelpSectionToggle(true)}>
+              <Text>Help</Text>
+            </TouchableOpacity>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-  help:{borderRadius:50},
+  help:{marginLeft:"10%",padding:"1%", borderRadius:50, backgroundColor:"grey", width:40},
 });
 
 export default LoginScreen;

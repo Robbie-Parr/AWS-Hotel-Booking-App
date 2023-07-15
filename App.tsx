@@ -26,6 +26,8 @@ const globalScreenOptions = {
 }
 
 const App = () => {
+
+  const Stack = createStackNavigator()
   
   return(
     <NavigationContainer>
